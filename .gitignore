@@ -1,3 +1,4 @@
+ignored/
 *.terraform
 *.tfstate.*
 *.tfstate
