@@ -32,3 +32,8 @@ variable "key" {
   type        = "string"
   description = "The client private key file for SSL client authentication."
 }
+
+variable "network_id" {
+  type        = "string"
+  description = "The ID of an available OpenStack network."
+}

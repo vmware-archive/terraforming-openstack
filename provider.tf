@@ -4,6 +4,6 @@ provider "openstack" {
   password    = "${var.password}"
   auth_url    = "${var.auth_url}"
   region      = "${var.region}"
-  domain      = "${var.domain}"
   key         = "${var.key}"
+  domain_name = "${var.domain}"
 }
