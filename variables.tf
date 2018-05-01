@@ -44,11 +44,6 @@ variable "keypair" {
   description = "The name of the keypair."
 }
 
-variable "external_network_id" {
-  type        = "string"
-  description = "The ID of the external network."
-}
-
 variable "external_network_name" {
   type        = "string"
   description = "The name of the external network."

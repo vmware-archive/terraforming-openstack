@@ -1,5 +1,5 @@
 data "openstack_networking_network_v2" "external" {
-  network_id = "${var.external_network_id}"
+  name = "${var.external_network_name}"
 }
 
 resource "openstack_networking_network_v2" "internal" {
