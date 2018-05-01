@@ -6,7 +6,6 @@ resource "openstack_images_image_v2" "ops_manager" {
   disk_format      = "raw"
   min_disk_gb      = 80
   min_ram_mb       = 8192
-  protected        = true
 }
 
 resource "openstack_compute_instance_v2" "ops_manager" {
