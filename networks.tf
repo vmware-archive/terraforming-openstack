@@ -13,6 +13,14 @@ resource "openstack_networking_subnet_v2" "internal" {
   network_id = "${openstack_networking_network_v2.internal.id}"
   region     = "${var.region}"
   cidr       = "${var.internal_cidr}"
+
+  allocation_pools = {
+    start = "${cidrhost(var.internal_cidr, 2)}"
+    end   = "${cidrhost(var.internal_cidr, 254)}"
+  }
+
+  enable_dhcp     = true
+  dns_nameservers = "${var.dns_nameservers}"
 }
 
 resource "openstack_networking_router_v2" "internal" {

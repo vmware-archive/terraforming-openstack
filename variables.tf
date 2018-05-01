@@ -26,7 +26,13 @@ variable "region" {
 
 variable "az" {
   type        = "string"
-  description = "The aavailability zone for the Ops Manager instance."
+  description = "The availability zone for the Ops Manager instance."
+}
+
+variable "dns_nameservers" {
+  type        = "list"
+  description = "An array of DNS name servers to be used by hosts in the subnet."
+  default     = [""]
 }
 
 variable "auth_url" {
@@ -64,11 +70,6 @@ variable "flavor_name" {
   type        = "string"
   description = "The name of the desired flavor for the Ops Manager instance."
   default     = "m1.large"
-}
-
-variable "ops_manager_image_url" {
-  type        = "string"
-  description = "The url for the Pivotal Cloud Foundry Ops Manager image to boot the Ops Manager instance."
 }
 
 variable "ops_manager_image" {
