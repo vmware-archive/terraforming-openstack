@@ -66,7 +66,7 @@ KEY
 - flavor_name: **(optional)** The name of the desired flavor for the Ops Manager instance. Defaults to `m1.large`.
 - ops_manager_image_url: **(required)** The url for the Pivotal Cloud Foundry Ops Manager image to boot the Ops Manager instance.
 - key: **(required)** The contents of the client private key file for SSL client authentication.
-- keypair: **(required)** The name of the keypair.
+- keypair: **(required)** The name of an existing key pair to put on the Ops Manager instance.
 
 ## Running
 
