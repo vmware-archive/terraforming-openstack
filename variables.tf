@@ -24,6 +24,11 @@ variable "region" {
   description = "The region of the OpenStack cloud to use."
 }
 
+variable "az" {
+  type        = "string"
+  description = "The aavailability zone for the Ops Manager instance."
+}
+
 variable "auth_url" {
   type        = "string"
   description = "The identity authentication url."

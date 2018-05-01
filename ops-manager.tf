@@ -9,7 +9,10 @@ resource "openstack_images_image_v2" "ops_manager" {
 }
 
 resource "openstack_compute_instance_v2" "ops_manager" {
-  name            = "${var.project}-ops-manager"
+  name              = "${var.project}-ops-manager"
+  region            = "${var.region}"
+  availability_zone = "${var.az}"
+
   image_id        = "${openstack_images_image_v2.ops_manager.id}"
   flavor_name     = "${var.flavor_name}"
   key_pair        = "${var.keypair}"
