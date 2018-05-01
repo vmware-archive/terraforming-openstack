@@ -39,9 +39,14 @@ variable "key" {
   description = "The client private key file for SSL client authentication."
 }
 
-variable "network_id" {
+variable "external_network_id" {
   type        = "string"
-  description = "The ID of an external network."
+  description = "The ID of the external network."
+}
+
+variable "external_network_name" {
+  type        = "string"
+  description = "The name of the external network."
 }
 
 variable "internal_cidr" {
