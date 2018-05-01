@@ -1,7 +1,7 @@
 # How Does One Use This?
 
 Please note that the master branch is generally *unstable*.
-If you are looking for something"tested", please consume one
+If you are looking for something "tested", please consume one
 of our [releases](https://github.com/pivotal-cf/terraforming-openstack/releases).
 
 ## What Does This Do?
