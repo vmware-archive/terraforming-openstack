@@ -44,8 +44,8 @@ auth_url = ""
 external_network_name = ""
 internal_cidr = ""
 ops_manager_image = "/path/to/pcf-openstack-2.1-build.214.raw"
-key = ""
-keypair = <<KEY
+keypair = ""
+key = <<KEY
 -----BEGIN RSA PRIVATE KEY-----
 -----END RSA PRIVATE KEY-----
 KEY
