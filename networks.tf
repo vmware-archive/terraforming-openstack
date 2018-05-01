@@ -41,6 +41,12 @@ resource "openstack_networking_floatingip_v2" "ops_manager" {
   pool   = "${var.external_network_name}"
 }
 
+resource "openstack_networking_floatingip_v2" "optional_ops_manager" {
+  count  = "${var.optional_ops_manager}"
+  region = "${var.region}"
+  pool   = "${var.external_network_name}"
+}
+
 resource "openstack_networking_floatingip_v2" "ha_proxy" {
   region = "${var.region}"
   pool   = "${var.external_network_name}"

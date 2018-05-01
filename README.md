@@ -65,6 +65,7 @@ KEY
 - ops_manager_image: **(required)** The local file path to the raw image to boot the Ops Manager instance.
 - key: **(required)** The contents of the client private key file for SSL client authentication.
 - keypair: **(required)** The name of an existing key pair to put on the Ops Manager instance.
+- optional_ops_manager: **(optional)** Set to 1 to deploy a second Ops Manager instance. Defaults to 0.
 
 ## Running
 
