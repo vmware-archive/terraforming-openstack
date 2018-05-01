@@ -3,6 +3,9 @@ resource "openstack_images_image_v2" "ops_manager" {
   image_source_url = "${var.ops_manager_image_url}"
   container_format = "bare"
   disk_format      = "raw"
+  min_disk_gb      = 80
+  min_ram_mb       = 8192
+  protected        = true
 }
 
 resource "openstack_compute_instance_v2" "ops_manager" {
