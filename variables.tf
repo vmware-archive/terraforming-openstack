@@ -65,11 +65,6 @@ variable "flavor_name" {
   default     = "m1.large"
 }
 
-variable "ops_manager_image_id" {
-  type        = "string"
-  description = "The image id to boot the Ops Manager instance."
-}
-
 variable "ops_manager_image_url" {
   type        = "string"
   description = "The url for the Pivotal Cloud Foundry Ops Manager image to boot the Ops Manager instance."

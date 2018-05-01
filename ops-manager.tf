@@ -1,5 +1,5 @@
 resource "openstack_images_image_v2" "ops_manager" {
-  name             = "${var.project} Ops Manager"
+  name             = "${var.project}-ops-manager"
   image_source_url = "${var.ops_manager_image_url}"
   container_format = "bare"
   disk_format      = "raw"
