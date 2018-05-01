@@ -39,6 +39,11 @@ variable "key" {
   description = "The client private key file for SSL client authentication."
 }
 
+variable "keypair" {
+  type        = "string"
+  description = "The name of the keypair."
+}
+
 variable "external_network_id" {
   type        = "string"
   description = "The ID of the external network."
@@ -52,4 +57,15 @@ variable "external_network_name" {
 variable "internal_cidr" {
   type        = "string"
   description = "CIDR representing IP range for the subnet."
+}
+
+variable "flavor_name" {
+  type        = "string"
+  description = "The name of the desired flavor for the Ops Manager instance."
+  default     = "m1.large"
+}
+
+variable "ops_manager_image_id" {
+  type        = "string"
+  description = "The image id to boot the Ops Manager instance."
 }
