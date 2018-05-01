@@ -1,3 +1,9 @@
+variable "env_name" {
+  type        = "string"
+  description = "The environment name."
+  default     = ""
+}
+
 variable "project" {
   type        = "string"
   description = "The name of the tenant (Identity v2) or project (Identity v3) to login with."
@@ -35,5 +41,10 @@ variable "key" {
 
 variable "network_id" {
   type        = "string"
-  description = "The ID of an available OpenStack network."
+  description = "The ID of an external network."
+}
+
+variable "internal_cidr" {
+  type        = "string"
+  description = "CIDR representing IP range for the subnet."
 }
