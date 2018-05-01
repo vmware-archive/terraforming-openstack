@@ -37,10 +37,36 @@ You should fill in the stub values with the correct content.
 
 ```hcl
 env_name =
+project =
+username =
+password =
+region =
+auth_url =
+domain =
+external_network_name =
+internal_cidr =
+flavor_name =
+ops_manager_image_url =
+key =
+keypair = <<KEY
+
+KEY
 ```
 
 ### Var Details
 - env_name: **(required)** An arbitrary unique name for namespacing resources.
+- project: **(required)** The name of the tenant (Identity v2) or project (Identity v3) to login with.
+- username: **(required)** The username to login with.
+- password: **(required)** The password to login with.
+- region: **(required)** The region of the OpenStack cloud to use.
+- auth_url: **(required)** The identity authentication url.
+- domain: **(optional)** The name of the domain to scope to (Identity v3). Defaults to `default`.
+- external_network_name: **(required)** The name of the external network.
+- internal_cidr: **(required)** CIDR representing the IP range for the subnet.
+- flavor_name: **(optional)** The name of the desired flavor for the Ops Manager instance. Defaults to `m1.large`.
+- ops_manager_image_url: **(required)** The url for the Pivotal Cloud Foundry Ops Manager image to boot the Ops Manager instance.
+- key: **(required)** The contents of the client private key file for SSL client authentication.
+- keypair: **(required)** The name of the keypair.
 
 ## Running
 

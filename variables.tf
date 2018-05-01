@@ -37,12 +37,12 @@ variable "domain" {
 
 variable "key" {
   type        = "string"
-  description = "The client private key file for SSL client authentication."
+  description = "The contents of the client private key file for SSL client authentication."
 }
 
 variable "keypair" {
   type        = "string"
-  description = "The name of the keypair."
+  description = "The name of an existing key pair to put on the Ops Manager instance."
 }
 
 variable "external_network_name" {
