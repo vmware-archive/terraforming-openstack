@@ -6,11 +6,9 @@ of our [releases](https://github.com/pivotal-cf/terraforming-openstack/releases)
 
 ## What Does This Do?
 
-You will get a booted ops-manager VM plus some networking - just the bare bones basically.
+You will get a booted ops-manager VM plus some networking.
 
-## Looking to setup a different IAAS
-
-We have have other terraform templates to help you!
+## Looking to setup a different IAAS?
 
 - [aws](https://github.com/pivotal-cf/terraforming-aws)
 - [azure](https://github.com/pivotal-cf/terraforming-azure)
@@ -36,20 +34,19 @@ These vars will be used when you run `terraform  apply`.
 You should fill in the stub values with the correct content.
 
 ```hcl
-env_name =
-project =
-username =
-password =
-region =
-auth_url =
-domain =
-external_network_name =
-internal_cidr =
-flavor_name =
-ops_manager_image_url =
-key =
+env_name = ""
+project = ""
+username = ""
+password = ""
+region = ""
+auth_url = ""
+external_network_name = ""
+internal_cidr = ""
+ops_manager_image_url = ""
+key = ""
 keypair = <<KEY
-
+-----BEGIN RSA PRIVATE KEY-----
+-----END RSA PRIVATE KEY-----
 KEY
 ```
 
