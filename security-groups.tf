@@ -1,4 +1,4 @@
-resource "openstack_compute_secgroup_v2" "ops_manager" {
+resource "openstack_compute_secgroup_v2" "ops-manager" {
   name        = "${var.project}-ops-manager"
   description = "${var.project} security group"
   region      = "${var.region}"

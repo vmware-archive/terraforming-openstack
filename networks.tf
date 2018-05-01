@@ -29,7 +29,7 @@ resource "openstack_networking_router_interface_v2" "internal" {
   subnet_id = "${openstack_networking_subnet_v2.internal.id}"
 }
 
-resource "openstack_networking_floatingip_v2" "ops_man" {
+resource "openstack_networking_floatingip_v2" "ops_manager" {
   region = "${var.region}"
   pool   = "${data.openstack_networking_network_v2.external.name}"
 }

@@ -3,7 +3,7 @@ output "internal_network_id" {
 }
 
 output "ops_man_floating_ip" {
-  value = "${openstack_networking_floatingip_v2.ops_man.address}"
+  value = "${openstack_networking_floatingip_v2.ops_manager.address}"
 }
 
 output "ha_proxy_floating_ip" {
