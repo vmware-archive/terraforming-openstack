@@ -39,10 +39,11 @@ project = ""
 username = ""
 password = ""
 region = ""
+az = ""
 auth_url = ""
 external_network_name = ""
 internal_cidr = ""
-ops_manager_image_url = ""
+ops_manager_image = "/path/to/pcf-openstack-2.1-build.214.raw"
 key = ""
 keypair = <<KEY
 -----BEGIN RSA PRIVATE KEY-----
@@ -61,7 +62,7 @@ KEY
 - external_network_name: **(required)** The name of the external network.
 - internal_cidr: **(required)** CIDR representing the IP range for the subnet.
 - flavor_name: **(optional)** The name of the desired flavor for the Ops Manager instance. Defaults to `m1.large`.
-- ops_manager_image_url: **(required)** The url for the Pivotal Cloud Foundry Ops Manager image to boot the Ops Manager instance.
+- ops_manager_image: **(required)** The local file path to the raw image to boot the Ops Manager instance.
 - key: **(required)** The contents of the client private key file for SSL client authentication.
 - keypair: **(required)** The name of an existing key pair to put on the Ops Manager instance.
 

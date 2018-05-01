@@ -70,3 +70,8 @@ variable "ops_manager_image_url" {
   type        = "string"
   description = "The url for the Pivotal Cloud Foundry Ops Manager image to boot the Ops Manager instance."
 }
+
+variable "ops_manager_image" {
+  type        = "string"
+  description = "The local file path to the raw image to boot the Ops Manager instance."
+}

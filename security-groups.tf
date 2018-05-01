@@ -1,6 +1,6 @@
 resource "openstack_compute_secgroup_v2" "ops-manager" {
   name        = "${var.project}-ops-manager"
-  description = "${var.project} security group"
+  description = "${var.project} Ops Manager"
   region      = "${var.region}"
 
   rule {
