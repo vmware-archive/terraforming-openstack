@@ -32,6 +32,7 @@ variable "auth_url" {
 variable "domain" {
   type        = "string"
   description = "The name of the domain to scope to (Identity v3)."
+  default     = "default"
 }
 
 variable "key" {
