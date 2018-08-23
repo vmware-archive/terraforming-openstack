@@ -7,3 +7,7 @@ provider "openstack" {
   key         = "${var.key}"
   domain_name = "${var.domain}"
 }
+
+terraform {
+  required_version = "< 0.12.0"
+}
