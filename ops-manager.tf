@@ -29,6 +29,18 @@ resource "openstack_compute_floatingip_associate_v2" "ops_manager_ip" {
   instance_id = "${openstack_compute_instance_v2.ops_manager.id}"
 }
 
+resource "openstack_images_image_v2" "optional_ops_manager" {
+  count           = "${var.optional_ops_manager}"
+
+  name            = "${var.project}-optional-ops-manager"
+  local_file_path = "${var.optional_ops_manager_image}"
+
+  container_format = "bare"
+  disk_format      = "raw"
+  min_disk_gb      = 80
+  min_ram_mb       = 8192
+}
+
 resource "openstack_compute_instance_v2" "optional_ops_manager" {
   count = "${var.optional_ops_manager}"
 
@@ -36,7 +48,7 @@ resource "openstack_compute_instance_v2" "optional_ops_manager" {
   region            = "${var.region}"
   availability_zone = "${var.az}"
 
-  image_id    = "${openstack_images_image_v2.ops_manager.id}"
+  image_id    = "${openstack_images_image_v2.optional_ops_manager.id}"
   flavor_name = "${var.flavor_name}"
 
   key_pair        = "${var.keypair}"

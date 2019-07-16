@@ -82,3 +82,9 @@ variable "optional_ops_manager" {
   description = "Deploy a second Ops Manager instance."
   default     = 0
 }
+
+variable "optional_ops_manager_image" {
+  type        = "string"
+  description = "The local file path to the raw image to boot the second Ops Manager instance."
+  default     = ""
+}
