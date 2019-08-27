@@ -24,9 +24,12 @@ brew update
 brew install terraform
 ```
 
-### Var File
+## Are you using Platform Automation?
+Be sure to skip the creation of the Ops Manager VM. Do **not** include `flavor_name` and set `ops_manager_image = ""` in your [vars](/README.md#var-details). If you create your Ops Manager using terraform, you will not be able to manage it with [Platform Automation](https://docs.pivotal.io/platform-automation).
 
-*Note:* If you're using Platform Automation, be sure to exclude [these variables](/README.md#var-details): `flavor_name` and `ops_manager_image`. If you create your Ops Manager here, you will not be able to manage it with [Platform Automation](https://docs.pivotal.io/platform-automation).
+Deployment of the infrastructure is still required.
+
+### Var File
 
 Copy the stub content below into a file called `terraform.tfvars`
 and put it in the root of this project.
