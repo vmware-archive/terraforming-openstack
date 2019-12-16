@@ -1,4 +1,6 @@
-# How Does One Use This?
+# Terraforming OpenStack
+
+## How Does One Use This?
 
 Please note that the master branch is generally *unstable*.
 If you are looking for something "tested", please consume one
